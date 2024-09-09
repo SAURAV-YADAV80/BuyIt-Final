@@ -1,0 +1,5 @@
+this is the ecommerce app
+
+it has product detail page as ProdDet page 
+which is converted into classBased component.
+there are some bugs which will be fixed by next iteration.
