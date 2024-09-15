@@ -2,7 +2,6 @@ import { useNavigate,Link } from 'react-router-dom';
 import { memo } from 'react';
 
 const BackButton = () => {
-  // const navigate = useNavigate();
 
   return (
     <Link

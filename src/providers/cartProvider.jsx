@@ -35,7 +35,6 @@ function CartProvider({ isLoggedIn, children, setAlert }) {
     setCart(newCart);
     setDirty(false);
 
-    // Prepare the cart as an object of {id: quantity} pairs
     const cartObject = newCart.reduce((acc, curr) => {
       return { ...acc, [curr.product.id]: curr.quantity };
     }, {});
@@ -44,7 +43,7 @@ function CartProvider({ isLoggedIn, children, setAlert }) {
       const cartString = JSON.stringify(cartObject);
       localStorage.setItem("cart", cartString);
     } else {
-      saveCart(cartObject); // Call saveCart with the {id: quantity} object
+      saveCart(cartObject);
     }
   }
 
@@ -82,13 +81,12 @@ function CartProvider({ isLoggedIn, children, setAlert }) {
           });
         }
 
-        // Transform the cart to an object of {id: quantity} pairs
         const cartObject = newCart.reduce((acc, curr) => {
           return { ...acc, [curr.product.id]: curr.quantity };
         }, {});
 
-        updateCart(newCart); // Update the UI cart state
-        saveCart(cartObject); // Save the transformed cart
+        updateCart(newCart);
+        saveCart(cartObject);
       });
     }
   }

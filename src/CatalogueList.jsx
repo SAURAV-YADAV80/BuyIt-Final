@@ -50,7 +50,7 @@ function CatalogueList({ cart, updateCart, setNewTotal }) {
     }));
     updateCart(updatedCart);
     setDirty(false);
-    toast.success('Cart updated successfully'); // Add notification
+    toast.success('Cart updated successfully');
   };
 
   const classText = dirty ? " text-white bg-red-500 " : " text-gray-200 bg-red-200 ";
